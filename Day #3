@@ -1,5 +1,10 @@
+:::: Question 1 ::::
+Pascal's Triangle
 
+problem statement:::
+https://leetcode.com/problems/pascals-triangle/?fbclid=IwAR3V2wChVU00EVRWGfPJ5yRCs-khrtpLg0cJzj8q_z_NyqixDqL4nR3XFZQ
 
+:::: Solution ::::
 
 vector<vector<int>> generate(int row) {
         if(row == 1)
