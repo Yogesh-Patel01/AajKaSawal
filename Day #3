@@ -27,3 +27,22 @@ vector<vector<int>> generate(int row) {
         }
         return ans;
     }
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+:::: Question 2 ::::
+Sort Colors
+
+problem statement:::
+https://leetcode.com/problems/sort-colors/description/?fbclid=IwAR3vbWyArLhqm_R5kP8gTL5nfp6in6VLaUkbtQNzO592Ik0NfT55nTi0qlQ
+
+:::: Solution ::::
+void sortColors(vector<int>& nums) {
+        map<int, int> temp;
+        for(auto x: nums)
+            temp[x]++;
+        nums.clear();
+        for(auto x: temp){
+            while(x.second--){
+                nums.push_back(x.first);
+            }
+        }
+    }
