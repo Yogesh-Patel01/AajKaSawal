@@ -1,0 +1,24 @@
+
+
+
+vector<vector<int>> generate(int row) {
+        if(row == 1)
+            return {{1}};
+        vector<vector<int>> ans;
+        ans.push_back({1});
+        ans.push_back({1,1});
+        if(row == 2)
+            return ans;
+        for(int i=2;i<row;i++){
+            vector<int> res;
+            res.push_back(1);
+
+            for(int j=0;j<i-1;j++){
+                int num = ans[i-1][j] + ans[i-1][j+1];
+                res.push_back(num);
+            }
+            res.push_back({1});
+            ans.push_back(res);
+        }
+        return ans;
+    }
