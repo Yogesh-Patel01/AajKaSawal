@@ -1,10 +1,10 @@
-:::: Question 1 ::::
-Reverse words in a given string
+// :::: Question 1 ::::
+// Reverse words in a given string
 
-problem statement:::
-https://practice.geeksforgeeks.org/problems/reverse-words-in-a-given-string5459/1?fbclid=IwAR08TK7S2v5AtyFCRWPahXStfvmoPzvMBXWRaGqmq12PW_byFu4Pkjf-D_U
+// problem statement:::
+// https://practice.geeksforgeeks.org/problems/reverse-words-in-a-given-string5459/1?fbclid=IwAR08TK7S2v5AtyFCRWPahXStfvmoPzvMBXWRaGqmq12PW_byFu4Pkjf-D_U
 
-:::: Solution ::::
+// :::: Solution ::::
 
 string reverseWords(string s){
         s += '.';
@@ -26,15 +26,15 @@ string reverseWords(string s){
         return ans.substr(1, n);
     } 
     
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-:::: Question 2 ::::
-Wave Array
+// :::: Question 2 ::::
+// Wave Array
 
-problem statement:::
-https://practice.geeksforgeeks.org/problems/wave-array-1587115621/1?fbclid=IwAR0PfgHOFTHyzbEJPVvDj0pZ4I0TvhLCV02Eck8Mf4EQWe8aOcL0gUJ_IDA
+// problem statement:::
+// https://practice.geeksforgeeks.org/problems/wave-array-1587115621/1?fbclid=IwAR0PfgHOFTHyzbEJPVvDj0pZ4I0TvhLCV02Eck8Mf4EQWe8aOcL0gUJ_IDA
 
-:::: Solution ::::
+// :::: Solution ::::
 
 void convertToWave(int n, vector<int>& arr){
         for(int i=0;i<n-1;i+=2){
