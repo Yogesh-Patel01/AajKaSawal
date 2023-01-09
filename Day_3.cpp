@@ -1,10 +1,10 @@
-:::: Question 1 ::::
-Pascal's Triangle
+// :::: Question 1 ::::
+// Pascal's Triangle
 
-problem statement:::
-https://leetcode.com/problems/pascals-triangle/?fbclid=IwAR3V2wChVU00EVRWGfPJ5yRCs-khrtpLg0cJzj8q_z_NyqixDqL4nR3XFZQ
+// problem statement:::
+// https://leetcode.com/problems/pascals-triangle/?fbclid=IwAR3V2wChVU00EVRWGfPJ5yRCs-khrtpLg0cJzj8q_z_NyqixDqL4nR3XFZQ
 
-:::: Solution ::::
+// :::: Solution ::::
 
 vector<vector<int>> generate(int row) {
         if(row == 1)
@@ -27,14 +27,14 @@ vector<vector<int>> generate(int row) {
         }
         return ans;
     }
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-:::: Question 2 ::::
-Sort Colors
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------
+// :::: Question 2 ::::
+// Sort Colors
 
-problem statement:::
-https://leetcode.com/problems/sort-colors/description/?fbclid=IwAR3vbWyArLhqm_R5kP8gTL5nfp6in6VLaUkbtQNzO592Ik0NfT55nTi0qlQ
+// problem statement:::
+// https://leetcode.com/problems/sort-colors/description/?fbclid=IwAR3vbWyArLhqm_R5kP8gTL5nfp6in6VLaUkbtQNzO592Ik0NfT55nTi0qlQ
 
-:::: Solution ::::
+// :::: Solution ::::
 void sortColors(vector<int>& nums) {
         map<int, int> temp;
         for(auto x: nums)
