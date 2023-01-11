@@ -1,1 +1,1 @@
-<h1> Aaj Ka Sawal </h1>
+<h1 align="center"> Aaj Ka Sawal </h1>
