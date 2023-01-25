@@ -27,4 +27,20 @@ void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
 
 // :::: Solution ::::
 
-
+int matchPlayersAndTrainers(vector<int>& player, vector<int>& train) {
+        sort(player.begin(), player.end());
+        sort(train.begin(), train.end());
+        int i = 0, j = 0;
+        int n = player.size();
+        int m = train.size();
+        int ans = 0;
+        while(i < m && j < n){
+            if(train[i] >= player[j]){
+                ans++;
+                i++, j++;
+            }
+            else
+                i++;
+        }
+        return ans;
+    }
