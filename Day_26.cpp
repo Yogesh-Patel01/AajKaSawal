@@ -17,3 +17,31 @@ int countGoodSubstrings(string s) {
         return ct;
     }
 
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// :::: Question 2 ::::
+// 2379. Minimum Recolors to Get K Consecutive Black Blocks
+
+// problem statement:::
+// https://leetcode.com/.../minimum-recolors-to-get-k.../
+
+// :::: Solution ::::
+
+int minimumRecolors(string block, int k) {
+        int white = 0;
+        for(int i=0;i<k;i++){
+            if(block[i] == 'W')
+                white++;
+        }
+        int ans = white;
+        int i = 0;
+        while(k < block.size()){
+            if(block[i] == 'W')
+                white--;
+            if(block[k] == 'W')
+                white++;
+            i++, k++;
+            ans = min(ans, white);
+        }
+        return ans;
+    }
