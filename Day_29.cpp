@@ -31,3 +31,24 @@ public:
 
 // :::: Solution ::::
 
+class Solution {
+  public:
+    int sumOfAll(int l, int r){
+        vector<bool> sieve(r+1, true);
+        int sum = 0;
+        sieve[0] = false;
+        sieve[1] = false;
+        for(int i=2;i<=r;i++){
+            if(sieve[i] == true){
+                if(i >= l)
+                    sum += i;
+                for(int j=2*i;j<=r;j=j+i){
+                    sieve[j] = false;
+                    if( j >= l)
+                        sum += i;
+                }
+            }
+        }
+        return sum;
+    }
+};
