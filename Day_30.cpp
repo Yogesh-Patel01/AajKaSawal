@@ -27,6 +27,36 @@ public:
     }
 };
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------
 
+// :::: Question 2 ::::
+// 1175. Prime Arrangements
 
+// problem statement:::
+// https://leetcode.com/prob.../prime-arrangements/description/
 
+// :::: Solution ::::
+
+class Solution {
+    int mod=1e9+7;
+    long long fact(int n){
+        if(n == 1 || n == 0)
+            return 1;
+        return n * fact(n-1) % mod;
+    }
+public:
+    int numPrimeArrangements(int n) {
+        vector<bool> sieve(n+1, true);
+        sieve[0] = sieve[1] = false;
+        int ct = 0;
+        for(int i=2;i<=n;i++){
+            if(sieve[i] == true){
+                ct++;
+                for(int j=2*i;j<=n;j+=i)
+                    sieve[j] = false;
+            }
+        }
+        long long int ans = fact(n-ct) % mod * fact(ct) % mod;
+        return ans % mod;
+    }
+};
