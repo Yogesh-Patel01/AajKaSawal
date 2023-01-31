@@ -9,19 +9,41 @@
 class NumArray {
 public:
     vector<int> temp;
-    vector<int> sum;
     NumArray(vector<int>& nums) {
        temp = nums;
        presum();
     }
     void presum(){
-        int tsum = 0;
-        for(int i=0;i<temp.size();i++){
-            tsum += temp[i];
-            sum.push_back(tsum);
+        for(int i=1;i<temp.size();i++){
+            temp[i] += temp[i-1];
         }
     }
     int sumRange(int left, int right) {
-        return left-1>=0 ? sum[right] - sum[left-1] : sum[right];
+        return left-1>=0 ? temp[right] - temp[left-1] : temp[right];
+    }
+};
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// :::: Question 2 ::::
+// 162. Find Peak Element
+
+// problem statement:::
+// https://leetcode.com/problems/find-peak-element/
+
+// :::: Solution ::::
+
+class Solution {
+public:
+    int findPeakElement(vector<int>& nums) {
+        int start = 0, end = nums.size() - 1;
+        while(start < end){
+            int mid = start + (end - start) / 2;
+            if(nums[mid] < nums[mid+1])
+                start = mid + 1;
+            else
+                end = mid;
+        }
+        return end;
     }
 };
